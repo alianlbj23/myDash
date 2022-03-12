@@ -1,3 +1,3 @@
 import sys
 sys.path.insert(0,"/var/www/Dash_test/myDash/")
-from app import server as application
+from myDash import server as application

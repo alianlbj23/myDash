@@ -23,4 +23,8 @@ app.layout = html.Div(children=[
 ])
 server = app.server
 if __name__ == '__main__':
+<<<<<<< HEAD
     app.run_server(debug=True,host='0.0.0.0',port='80')
+=======
+    app.run_server(debug=True,host='0.0.0.0',port='80')
+>>>>>>> 95d31ff092ac9ca5bf61e87937eb3f05a1011c85
