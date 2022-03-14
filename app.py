@@ -2,6 +2,7 @@ from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
 app = Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 df = pd.DataFrame({
     "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
     "Amount": [4, 1, 2, 2, 4, 5],
@@ -23,8 +24,5 @@ app.layout = html.Div(children=[
 ])
 server = app.server
 if __name__ == '__main__':
-<<<<<<< HEAD
     app.run_server(debug=True,host='0.0.0.0',port='80')
-=======
-    app.run_server(debug=True,host='0.0.0.0',port='80')
->>>>>>> 95d31ff092ac9ca5bf61e87937eb3f05a1011c85
+
