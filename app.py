@@ -1,8 +1,10 @@
+from unicodedata import name
 from dash import Dash, html, dcc
+import dash_core_components as dcc
+import dash_html_components as html
 import plotly.express as px
 import pandas as pd
-app = Dash(__name__)
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(name="app", sharing=True,server=server.server,url_base_pathname="/")
 df = pd.DataFrame({
     "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
     "Amount": [4, 1, 2, 2, 4, 5],
